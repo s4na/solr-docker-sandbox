@@ -1,0 +1,63 @@
+INFO  - 2021-04-17 14:56:20.513; [   ] org.eclipse.jetty.util.log.Log; Logging initialized @780ms
+INFO  - 2021-04-17 14:56:20.900; [   ] org.eclipse.jetty.server.Server; jetty-9.3.14.v20161028
+INFO  - 2021-04-17 14:56:20.963; [   ] org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor [file:///app/server/contexts/] at interval 0
+INFO  - 2021-04-17 14:56:21.499; [   ] org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2021-04-17 14:56:21.600; [   ] org.apache.solr.servlet.SolrDispatchFilter;  ___      _       Welcome to Apache Solr™ version 6.6.6
+INFO  - 2021-04-17 14:56:21.601; [   ] org.apache.solr.servlet.SolrDispatchFilter; / __| ___| |_ _   Starting in standalone mode on port 8983
+INFO  - 2021-04-17 14:56:21.602; [   ] org.apache.solr.servlet.SolrDispatchFilter; \__ \/ _ \ | '_|  Install dir: /app
+INFO  - 2021-04-17 14:56:21.634; [   ] org.apache.solr.servlet.SolrDispatchFilter; |___/\___/_|_|    Start time: 2021-04-17T14:56:21.605Z
+INFO  - 2021-04-17 14:56:21.703; [   ] org.apache.solr.core.SolrResourceLoader; Using system property solr.solr.home: /app/example/techproducts/solr
+INFO  - 2021-04-17 14:56:21.721; [   ] org.apache.solr.core.SolrXmlConfig; Loading container configuration from /app/example/techproducts/solr/solr.xml
+INFO  - 2021-04-17 14:56:22.068; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+INFO  - 2021-04-17 14:56:22.457; [   ] org.apache.solr.update.UpdateShardHandler; Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+INFO  - 2021-04-17 14:56:22.822; [   ] org.apache.solr.core.CorePropertiesLocator; Found 1 core definitions underneath /app/example/techproducts/solr
+INFO  - 2021-04-17 14:56:22.825; [   ] org.apache.solr.core.CorePropertiesLocator; Cores are: [techproducts]
+INFO  - 2021-04-17 14:56:22.833; [   ] org.apache.solr.core.TransientSolrCoreCacheDefault; Allocating transient cache for 2147483647 transient cores
+INFO  - 2021-04-17 14:56:22.971; [   ] org.eclipse.jetty.server.handler.ContextHandler; Started o.e.j.w.WebAppContext@1f7030a6{/solr,file:///app/server/solr-webapp/webapp/,AVAILABLE}{/app/server/solr-webapp/webapp}
+WARN  - 2021-04-17 14:56:22.991; [   x:techproducts] org.apache.solr.core.SolrConfig; Couldn't add files from /app/contrib/ltr/lib filtered by .*\.jar to classpath: /app/contrib/ltr/lib
+INFO  - 2021-04-17 14:56:23.007; [   x:techproducts] org.apache.solr.core.SolrResourceLoader; [techproducts] Added 54 libs to classloader, from paths: [/app/contrib/clustering/lib, /app/contrib/extraction/lib, /app/contrib/langid/lib, /app/contrib/velocity/lib, /app/dist]
+INFO  - 2021-04-17 14:56:23.009; [   ] org.eclipse.jetty.server.AbstractConnector; Started ServerConnector@117159c0{HTTP/1.1,[http/1.1]}{0.0.0.0:8983}
+INFO  - 2021-04-17 14:56:23.012; [   ] org.eclipse.jetty.server.Server; Started @3282ms
+INFO  - 2021-04-17 14:56:23.571; [   x:techproducts] org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2021-04-17 14:56:23.586; [   x:techproducts] org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 6.6.6
+INFO  - 2021-04-17 14:56:23.824; [   x:techproducts] org.apache.solr.schema.IndexSchema; [techproducts] Schema name=example
+INFO  - 2021-04-17 14:56:24.867; [   x:techproducts] org.apache.solr.rest.RestManager$Registry; Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+INFO  - 2021-04-17 14:56:24.868; [   x:techproducts] org.apache.solr.rest.RestManager$Registry; Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+INFO  - 2021-04-17 14:56:24.879; [   x:techproducts] org.apache.solr.schema.IndexSchema; Loaded schema example/1.6 with uniqueid field id
+INFO  - 2021-04-17 14:56:24.881; [   x:techproducts] org.apache.solr.rest.RestManager$Registry; Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+INFO  - 2021-04-17 14:56:24.882; [   x:techproducts] org.apache.solr.rest.RestManager$Registry; Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+INFO  - 2021-04-17 14:56:25.007; [   x:techproducts] org.apache.solr.core.CoreContainer; Creating SolrCore 'techproducts' using configuration from instancedir /app/example/techproducts/solr/techproducts, trusted=true
+INFO  - 2021-04-17 14:56:25.084; [   x:techproducts] org.apache.solr.core.SolrCore; solr.RecoveryStrategy.Builder
+INFO  - 2021-04-17 14:56:25.096; [   x:techproducts] org.apache.solr.core.SolrCore; [[techproducts] ] Opening new SolrCore at [/app/example/techproducts/solr/techproducts], dataDir=[/app/example/techproducts/solr/techproducts/data/]
+INFO  - 2021-04-17 14:56:25.199; [   x:techproducts] org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2021-04-17 14:56:26.040; [   x:techproducts] org.apache.solr.update.UpdateHandler; Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+INFO  - 2021-04-17 14:56:26.042; [   x:techproducts] org.apache.solr.update.UpdateLog; Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+INFO  - 2021-04-17 14:56:26.080; [   x:techproducts] org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2021-04-17 14:56:26.081; [   x:techproducts] org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2021-04-17 14:56:26.310; [   x:techproducts] org.apache.solr.search.SolrIndexSearcher; Opening [Searcher@8a0778f[techproducts] main]
+INFO  - 2021-04-17 14:56:26.335; [   x:techproducts] org.apache.solr.rest.ManagedResourceStorage$FileStorageIO; File-based storage initialized to use dir: /app/example/techproducts/solr/techproducts/conf
+INFO  - 2021-04-17 14:56:26.341; [   x:techproducts] org.apache.solr.rest.ManagedResourceStorage; Loaded LinkedHashMap at path _rest_managed.json using file:dir=/app/example/techproducts/solr/techproducts/conf
+INFO  - 2021-04-17 14:56:26.342; [   x:techproducts] org.apache.solr.rest.ManagedResource; Loaded initArgs {} for /rest/managed
+INFO  - 2021-04-17 14:56:26.346; [   x:techproducts] org.apache.solr.rest.ManagedResourceStorage; Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=/app/example/techproducts/solr/techproducts/conf
+INFO  - 2021-04-17 14:56:26.347; [   x:techproducts] org.apache.solr.rest.ManagedResource; Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+INFO  - 2021-04-17 14:56:26.348; [   x:techproducts] org.apache.solr.rest.schema.analysis.ManagedWordSetResource; Loaded 35 words for /schema/analysis/stopwords/english
+INFO  - 2021-04-17 14:56:26.350; [   x:techproducts] org.apache.solr.rest.ManagedResource; Notified 2 observers of /schema/analysis/stopwords/english
+INFO  - 2021-04-17 14:56:26.356; [   x:techproducts] org.apache.solr.rest.ManagedResourceStorage; Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=/app/example/techproducts/solr/techproducts/conf
+INFO  - 2021-04-17 14:56:26.357; [   x:techproducts] org.apache.solr.rest.ManagedResource; Loaded initArgs {ignoreCase=true,format=solr} for /schema/analysis/synonyms/english
+INFO  - 2021-04-17 14:56:26.359; [   x:techproducts] org.apache.solr.rest.schema.analysis.ManagedSynonymFilterFactory$SynonymManager; Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+INFO  - 2021-04-17 14:56:26.363; [   x:techproducts] org.apache.solr.rest.ManagedResource; Notified 2 observers of /schema/analysis/synonyms/english
+INFO  - 2021-04-17 14:56:26.379; [   x:techproducts] org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2021-04-17 14:56:26.404; [   x:techproducts] org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2021-04-17 14:56:26.426; [   x:techproducts] org.apache.solr.handler.component.SuggestComponent; Initializing SuggestComponent
+INFO  - 2021-04-17 14:56:26.432; [   x:techproducts] org.apache.solr.spelling.suggest.SolrSuggester; init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string,buildOnStartup=false}
+INFO  - 2021-04-17 14:56:26.478; [   x:techproducts] org.apache.solr.spelling.suggest.SolrSuggester; Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string,buildOnStartup=false}
+INFO  - 2021-04-17 14:56:26.481; [   x:techproducts] org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /app/example/techproducts/solr/techproducts/conf/elevate.xml
+INFO  - 2021-04-17 14:56:26.511; [   x:techproducts] org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2021-04-17 14:56:26.579; [   x:techproducts] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@8a0778f[techproducts] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.6.6):C32)))}
+INFO  - 2021-04-17 14:56:26.668; [   x:techproducts] org.apache.solr.core.SolrCore; [techproducts]  webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=3 status=0 QTime=83
+INFO  - 2021-04-17 14:56:26.678; [   x:techproducts] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2021-04-17 14:56:26.679; [   x:techproducts] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2021-04-17 14:56:26.681; [   x:techproducts] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2021-04-17 14:56:26.684; [   x:techproducts] org.apache.solr.core.SolrCore; [techproducts] Registered new searcher Searcher@8a0778f[techproducts] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.6.6):C32)))}
+INFO  - 2021-04-17 14:56:30.374; [   ] org.apache.solr.servlet.HttpSolrCall; [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=28
+INFO  - 2021-04-17 14:56:30.453; [   ] org.apache.solr.servlet.HttpSolrCall; [admin] webapp=null path=/admin/cores params={core=techproducts&action=STATUS&wt=json} status=0 QTime=14
