@@ -1,0 +1,9 @@
+version: '3'
+services:
+  solr-app:
+    build: .
+    ports:
+      - "8983:8983"
+    volumes:
+      - ./solr:/app
+    command: /entrypoint.sh
