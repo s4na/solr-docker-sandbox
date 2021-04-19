@@ -1,4 +1,4 @@
-# Solr練習場
+# Apache Solr Sandbox
 
 ## 使い方
 
